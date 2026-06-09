@@ -217,7 +217,7 @@
 <body>
 
 <!-- EDIT FAB -->
-<button id="edit-fab" onclick="togglePanel()">
+<button id="edit-fab" onclick="checkPassword()">
   <i class="fa fa-pen"></i> Edit Details
 </button>
 
@@ -459,7 +459,14 @@
   <p>© 2025 <strong>SLS Puthenvila Traders Pvt Ltd</strong>. All rights reserved.</p>
   <p style="margin-top:6px;">Trading Beyond Boundaries, Building Trust Forever.</p>
 </footer>
-
+function checkPassword() {
+  const pwd = prompt("Enter Admin Password:");
+  if (pwd === "SLS@2025") {
+    togglePanel();
+  } else if (pwd !== null) {
+    alert("Wrong password! Access denied.");
+  }
+}
 <script>
   // WhatsApp number storage
   let waNumber = '919000000000';
